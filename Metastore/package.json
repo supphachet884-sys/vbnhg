@@ -1,0 +1,22 @@
+{
+  "name": "metastore",
+  "version": "1.0.0",
+  "description": "MetaStore — Production-Ready Store Platform with Cloudflare Workers & D1 Integration",
+  "main": "_worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create metastore-db",
+    "db:init": "wrangler d1 execute metastore-db --file=./schema.sql",
+    "db:local": "wrangler d1 execute metastore-db --local --file=./schema.sql",
+    "preview": "npx serve ."
+  },
+  "keywords": [
+    "metastore",
+    "cloudflare-workers",
+    "cloudflare-d1",
+    "truemoney"
+  ],
+  "author": "MetaStore",
+  "license": "ISC"
+}
